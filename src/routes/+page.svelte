@@ -1,24 +1,42 @@
 <script>
+  import Resume from '$lib/assets/ShaneMisraATS.pdf'
 	import Pic from '$lib/assets/Shane_Profile.jpg'
+
   let projects = {
     'Avian Anthems' : 'https://avian-anthems.vercel.app/',
     'Mars Chronicles' : 'https://mars-chronicles.vercel.app/',
     'Hyper Loom' : 'https://hyper-loom-explorer.vercel.app/'
   }
+
 </script>
 
-<h1>Welcome to my Professional Portfolio!</h1>
-<p>
-  This page is a work in progress, but this is the perfect place to start if you are looking to see what I am capable of as a software developer thus far!
-</p>
-<div>
-  <img src={Pic} alt="example"/>
-</div>
-<footer>
-  <p>Showcase:</p>
-  <a href={projects['Avian Anthems']}>Avian Anthems</a>
-  <a href={projects['Mars Chronicles']}>Mars Chronicles</a>
-  <a href={projects['Hyper Loom']}>Hyper Loom</a>
+<header class='portfolio-header'>
+  <h1 class='header-text'>Welcome to my Professional Portfolio!</h1>
+  <ul class='header-link-container'>
+    <li class='header-link'>Projects</li>
+    <li class='header-link'>Idle Thoughts / Blog</li>
+    <li class='header-link'>About Me</li>
+  </ul>
+</header>
+<main class='welcome-body'>
+  <p class='welcome-text'>
+    This page is a work in progress, but this is the perfect place to start if you are looking to see what I am capable of as a software developer thus far!
+  </p>
+  <section class='welcome-picture'>
+    <img src={Pic} alt="example"/>
+  </section>
+  <a href={Resume} class='direct-link'>View my Resume</a>
+  <button class='download-button'>
+    <a href={Resume} class='direct-link' download>
+      Download my Resume
+    </a>
+  </button>
+</main>
+<footer class='footer-link-container'>
+  <p class='footer-text'>Direct Project Links:</p>
+  <a href={projects['Avian Anthems']} class='footer-link'>Avian Anthems</a>
+  <a href={projects['Mars Chronicles']} class='footer-link'>Mars Chronicles</a>
+  <a href={projects['Hyper Loom']} class='footer-link'>Hyper Loom</a>
 </footer>
 
 <style>
@@ -32,7 +50,7 @@
     justify-content: center;
     font-size: 2rem;
   }
-  div {
+  section {
     display: flex;
     justify-content: center;
   }
