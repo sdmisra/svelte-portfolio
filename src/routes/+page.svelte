@@ -1,6 +1,7 @@
 <script>
   import Resume from '$lib/assets/ShaneMisraATS.pdf'
 	import Pic from '$lib/assets/Shane_Profile.jpg'
+  import Background from '$lib/assets/loom_background.jpg'
 
   let projects = {
     'Avian Anthems' : 'https://avian-anthems.vercel.app/',
@@ -12,11 +13,11 @@
 
 <header class='portfolio-header'>
   <h1 class='header-text'>Welcome to my Professional Portfolio!</h1>
-  <ul class='header-link-container'>
-    <li class='header-link'>Projects</li>
-    <li class='header-link'>Idle Thoughts / Blog</li>
-    <li class='header-link'>About Me</li>
-  </ul>
+  <div class='header-link-container'>
+    <span>Projects</span>
+    <span>About Me</span>
+    <span>Further Reading</span>
+  </div>
 </header>
 <main class='welcome-body'>
   <p class='welcome-text'>
@@ -24,6 +25,7 @@
   </p>
   <section class='welcome-picture'>
     <img src={Pic} alt="example"/>
+    <img src={Background} alt='background'/>
   </section>
   <a href={Resume} class='direct-link'>View my Resume</a>
   <button class='download-button'>
@@ -40,10 +42,19 @@
 </footer>
 
 <style>
+
   h1 {
     display:flex;
     justify-content: center;
     font-size: 4rem;
+  }
+  .header-link-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+  background: radial-gradient(circle, rgba(232,208,65,0.94) 5%, rgba(227,187,80,0.91) 25%, rgba(186,27,194,1) 100%);
   }
   p {
     display:flex;
