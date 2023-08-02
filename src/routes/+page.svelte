@@ -24,7 +24,7 @@
     This page is a work in progress, but this is the perfect place to start if you are looking to see what I am capable of as a software developer thus far!
   </p>
   <section class='welcome-picture'>
-    <img src={Pic} alt="example"/>
+    <img src={Pic} alt="the website creator, Shane Misra"/>
     <img src={Background} alt='background'/>
   </section>
   <a href={Resume} class='direct-link'>View my Resume</a>
@@ -47,15 +47,14 @@
     display:flex;
     justify-content: center;
     font-size: 4rem;
+    background: radial-gradient(circle, rgba(232,208,65,0.94) 5%, rgba(227,187,80,0.91) 25%, rgba(186,27,194,1) 100%);
+    border-radius: .75rem;
   }
   .header-link-container {
     display: flex;
     flex-direction: column;
   }
 
-main {
-  background: radial-gradient(circle, rgba(232,208,65,0.94) 5%, rgba(227,187,80,0.91) 25%, rgba(186,27,194,1) 100%);
-  }
   p {
     display:flex;
     justify-content: center;
