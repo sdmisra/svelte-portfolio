@@ -67,12 +67,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: .25rem;
+    padding: .15rem;
+  }
+  .footer-link {
+    margin: .15rem;
+    padding: .15rem;
+    background-color: rgba(112, 128, 144, 0.535);
+    border-radius: .75rem;
+  }
+  .footer-link-container {
+    margin: .15rem;
+    padding: .25rem;
   }
   
   .footer-text {
     display:flex;
     justify-content: center;
     font-size: 2rem;
+    background-color: hsla(210, 13%, 50%, 0.75);
+    border-radius: .55rem;
+    color: aliceblue;
   }
   
   footer {
@@ -88,6 +103,6 @@
     }
   
     :global(a):hover {
-      color: rebeccapurple;
+      color: rgb(233, 229, 239);
     }
 </style>
