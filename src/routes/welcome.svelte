@@ -6,7 +6,10 @@
 <main class='welcome-body'>
   <section class='left-panel'>
     <p class='welcome-text'>
-      This page is a work in progress, but this is the perfect place to start if you are looking to see what I am capable of as a software developer thus far!
+     My name is Shane Misra - I am a software developer with a foundation in FE technologies!
+    </p>
+    <p class='welcome-text'>
+     Please have a look around, and check out a few of my deployed project links below for immediate examples of my work.
     </p>
   </section>
   <div class='resume-container'>
@@ -26,15 +29,21 @@
   
   .welcome-body {
     display:flex;
-    background: rgba(240, 248, 255, 0.426);
+    background: rgba(240, 248, 255, 0.35);
+    border: 2px rgba(240, 248, 255, 0.5) solid;
+    border-radius: .25rem;
+    margin: .15rem;
   }
   .left-panel {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    margin: .5rem;
+    padding: .25rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'Rethogen Atomics', sans-serif;
   }
 
   .resume-container {
@@ -47,6 +56,9 @@
   .welcome-picture {
     display: flex;
     justify-content: center;
+  }
+  .welcome-text {
+    font-size: 1.25rem;
   }
   .resume-button {
     margin: .1rem;
@@ -65,7 +77,8 @@
     max-height: 60vh;
     max-width: 60vw;
     border-radius: 1rem;
-    border: 1px solid black;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border: 1px rgba(240, 248, 255, 0.20) solid;
   }
 
   @keyframes grow-and-shrink {
