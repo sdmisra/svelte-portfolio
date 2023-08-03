@@ -1,18 +1,17 @@
 <script>
   import {onMount} from 'svelte'
   import {getHeadlines, getSearch} from '$lib/apiCalls.js'
-  let headlineStories = []
-  let resultsStories = []
+  let displayedStories = []
   let searchText = ''
 
   onMount(async ()=> {
     let headlines =  await getHeadlines()
-    headlineStories = headlines.articles
+    displayedStories = headlines.articles
   })
 
   const searchFunction = async (query)=> {
     let results = await getSearch(query)
-    resultsStories = results.articles
+    displayedStories = results.articles
   }
 
 </script>
@@ -24,12 +23,14 @@
     <button class="search-button" 
     on:click={searchFunction(searchText) }>Search</button>
   </div>
-  <section class="headlines">
-    {#each headlineStories as story}
-      <figure class='story-card'>
-        <img src={story.urlToImage} alt={story.title} class='thumbnail'/>
-        <figcaption>{story.title}</figcaption>
-      </figure>
+  <section class="story-container">
+    {#each displayedStories as story}
+    <section class='story-card'>
+      <img src={story.urlToImage} alt={story.title} class='thumbnail'/>
+      <span class='story-title'>{story.title}</span>
+      <span>Date: {story.publishedAt.slice(0,10)}</span>
+      <a href={story.url}>Link to full story</a>
+      </section>
     {:else}
       <p class='loading-text'>Loading Articles!</p>
     {/each}
@@ -47,11 +48,25 @@
 				  -1px -1px 0 #000;
   }
   .story-card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .15rem;
+    padding: .15rem;
+    background: rgba(153, 183, 214, 0.504);
     border: 1px black solid;
+    width: 48%;
+  }
+  .story-container {
+    display:flex;
+    flex-wrap: wrap;
+    width: 90vw;
   }
   .thumbnail {
-    max-width: 15%;
-    max-height: 10%;
+    border: 1px aliceblue solid;
+    border-radius: .2rem;
+    width: 45%;
+    height: 40%;
   }
   .blog-body {
     display:flex;
