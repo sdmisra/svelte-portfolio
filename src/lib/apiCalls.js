@@ -2,7 +2,12 @@ const key = '268fc9b134ba43c6b9a4a1d1e30fde70'
 const headlines = 'https://newsapi.org/v2/top-headlines?country=us&apiKey='
 
 export const getHeadlines = async () => {
-  const request = await fetch(headlines + key)
+  const headers = {
+    'connection': 'upgrade',
+    'upgrade': 'HTTP/2, HTTP/3',
+  };
+  const request = await fetch(headlines + key, {headers})
+
   .then(response=> {
     if (!response.ok) {
       throw new Error(response.status)
