@@ -12,7 +12,4 @@
     margin: .15rem;
   }
 
-  .aboutme-segment {
-
-  }
 </style>

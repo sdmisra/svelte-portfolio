@@ -52,8 +52,9 @@
       width: 100vw;
       height: 100vh;
       background: aliceblue;
-      background-image: url('$lib/assets/MirroredTundra.png');
-      background-size: contain;
+      background-image: url('$lib/assets/MirroredTundra.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
   .header-text {

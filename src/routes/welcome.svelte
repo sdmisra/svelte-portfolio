@@ -1,5 +1,5 @@
 <script>
-  import Resume from '$lib/assets/ShaneMisraATS.pdf'
+  import Resume from '$lib/assets/ShaneMisra - ATS Version.pdf'
 	import Pic from '$lib/assets/Shane_Profile.jpg'
 </script>
 
@@ -42,7 +42,6 @@
     padding: .25rem;
   }
   p {
-    font-size: 3rem;
     font-family: 'Rethogen Atomics', sans-serif;
   }
 
@@ -58,7 +57,7 @@
     justify-content: center;
   }
   .welcome-text {
-    font-size: 1.25rem;
+    font-size: 4rem;
   }
   .resume-button {
     margin: .1rem;
